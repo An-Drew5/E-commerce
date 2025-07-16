@@ -4,12 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header'
 import Product from './components/Product'
+import Wallpapers from './components/Wallpapers'
+import Blinds from './components/Blinds'
 
 function App() {
   return (
     <>
       <Header />
       <Product />
+      <Wallpapers />
+      <Blinds />
     </>
   )
 }
