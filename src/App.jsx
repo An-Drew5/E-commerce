@@ -4,16 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header'
 import Product from './components/Product'
-import Wallpapers from './components/Wallpapers'
-import Blinds from './components/Blinds'
+import { imageGallery, newArrivals, blindsImages, wallpaperImages } from "./util/productImages";
 
 function App() {
   return (
     <>
       <Header />
-      <Product />
-      <Wallpapers />
-      <Blinds />
+      <Product heading="Popular" images={imageGallery}/>
+      <Product heading="New Arrivals" images={newArrivals}/>
+      <Product heading="Window Blinds" images={blindsImages}/>
+      <Product heading="Wallpapers" images={wallpaperImages}/>
     </>
   )
 }
