@@ -1,239 +1,354 @@
 
 
 export const imageGallery = [
-    {        id: 1,
-        src: "/images/img-1.jpg",
+    {       
+        id: 1,
+        image: "/images/img-1.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 2,
-        src: "/images/img-2.jpg",
+        image: "/images/img-2.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 3,
-        src: "/images/img-3.jpg",
+        image: "/images/img-3.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 4,
-        src: "/images/img-4.jpg",
+        image: "/images/img-4.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 5,
-        src: "/images/img-5.jpg",
+        image: "/images/img-5.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 6,
-        src: "/images/img-6.jpg",
+        image: "/images/img-6.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 7,
-        src: "/images/img-7.jpg",
+        image: "/images/img-7.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 8,
-        src: "/images/img-8.jpg",
+        image: "/images/img-8.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 9,
-        src: "/images/img-9.jpg",
+        image: "/images/img-9.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 10,
-        src: "/images/img-10.jpg",
+        image: "/images/img-10.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 11,
-        src: "/images/img-11.jpg",
+        image: "/images/img-11.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 12,
-        src: "/images/img-12.jpg",
+        image: "/images/img-12.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 13,
-        src: "/images/img-13.jpg",
+        image: "/images/img-13.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 14,
-        src: "/images/img-14.jpg",
+        image: "/images/img-14.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 15,
-        src: "/images/img-15.jpg",
+        image: "/images/img-15.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
     {
         id: 16,
-        src: "/images/img-16.jpg",
+        image: "/images/img-16.jpg",
+        title: "ASDF",
+        price: `GHC${250.00}`,
+        description: "test"
     },
 ]
 export const newArrivals =
 [
     {
         id: 17,
-        src: "/images/img-17.jpg",
+        image: "/images/img-17.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Elegant sheer curtains for a light and airy feel."
     },
     {
         id: 18,
-        src: "/images/img-18.jpg",
+        image: "/images/img-18.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Bold patterned curtains to make a statement."
     },
     {
         id: 19,
-        src: "/images/img-19.jpg",
+        image: "/images/img-19.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Classic blackout curtains for complete privacy."
     },
     {
         id: 20,
-        src: "/images/img-20.jpg",
+        image: "/images/img-20.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Luxurious velvet curtains for a touch of opulence."
     },
     {
         id: 21,
-        src: "/images/img-21.jpg",
+        image: "/images/img-21.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Modern geometric print curtains for a contemporary look."
     },
     {
         id: 22,
-        src: "/images/img-22.jpg",
+        image: "/images/img-22.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Natural linen curtains for a rustic charm."
     },
     {
         id: 23,
-        src: "/images/img-23.jpg",
+        image: "/images/img-23.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Vibrant colored curtains to brighten up your space."
     },
     {
         id: 24,
-        src: "/images/img-24.jpg",
+        image: "/images/img-24.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Subtle pastel curtains for a soft, calming effect."
     },
     {
         id: 25,
-        src: "/images/img-25.jpg",
+        image: "/images/img-25.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Textured curtains for added depth and interest."
     },
     {
         id: 26,
-        src: "/images/img-26.jpg",
+        image: "/images/img-26.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Floral print curtains for a fresh, natural look."
     },
     {
         id: 27,
-        src: "/images/img-27.jpg",
+        image: "/images/img-27.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Striped curtains for a classic, timeless appeal."
     },
 ]
 export const blindsImages = [
     {
         id: 28,
-        src: "/images/img-28.jpg",
+        image: "/images/img-28.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Elegant roller blinds for a sleek finish."
     },
     {
         id: 29,
-        src: "/images/img-29.jpg",
+        image: "/images/img-29.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Stylish Venetian blinds for adjustable light control."
     },
     {
         id: 30,
-        src: "/images/img-30.jpg",
+        image: "/images/img-30.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Modern vertical blinds for a contemporary look."
     },
     {
         id: 31,
-        src: "/images/img-31.jpg",
+        image: "/images/img-31.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Classic Roman blinds for a timeless elegance."
     },
     {
         id: 32,
-        src: "/images/img-32.jpg",
+        image: "/images/img-32.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Functional blackout blinds for complete darkness."
     },
     {
         id: 33,
-        src: "/images/img-33.jpg",
+        image: "/images/img-33.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
         description: "Sheer blinds for a soft, diffused light effect."
     }
 ]
 export const wallpaperImages = [
     {
         id: 34,
-        src: "/images/img-33.jpg",
-        description: "jjjj"
+        image: "/images/img-33.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 35,
-        src: "/image/img-35.jpg",
-        description: ""
+        image: "/images/img-35.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 36,
-        src: "/image/img-36.jpg",
-        description: ""
+        image: "/images/img-36.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 37,
-        src: "/image/img-37.jpg",
-        description: ""
+        image: "/images/img-37.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 38,
-        src: "/image/img-38.jpg",
-        description: ""
+        image: "/images/img-38.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 39,
-        src: "/image/img-39.jpg",
-        description: ""
+        image: "/images/img-39.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 40,
-        src: "/image/img-40.jpg",
-        description: ""
+        image: "/images/img-40.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 41,
-        src: "/image/img-41.jpg",
-        description: ""
+        image: "/images/img-41.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 42,
-        src: "/image/img-42.jpg",
-        description: ""
+        image: "/images/img-42.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 43,
-        src: "/image/img-43.jpg",
-        description: ""
+        image: "/images/img-43.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 44,
-        src: "/image/img-44.jpg",
-        description: ""
+        image: "/images/img-44.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 45,
-        src: "/image/img-45.jpg",
-        description: ""
+        image: "/images/img-45.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 46,
-        src: "/image/img-46.jpg",
-        description: ""
+        image: "/images/img-46.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 47,
-        src: "/image/img-47.jpg",
-        description: ""
+        image: "/images/img-47.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 48,
-        src: "/image/img-48.jpg",
-        description: ""
+        image: "/images/img-48.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
     {
         id: 49,
-        src: "/image/img-49.jpg",
-        description: ""
+        image: "/images/img-49.jpg",
+        title: "ASDF",
+        price: `GHC${300.00}`,
+        description: "test"
     },
 ]

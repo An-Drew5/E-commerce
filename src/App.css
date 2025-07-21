@@ -132,6 +132,81 @@
   font-size: 1rem;
 }
 
+.shop {
+  height: 100%;
+  background: #5f4e33;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.shop img {
+  width: 100%;
+  border-radius: 6px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.shop-content {
+  flex: 1;
+  padding: 0 1rem 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shop-content h3 {
+  font-size: 1.25rem;
+  color: #fbd392;
+  margin-bottom: 0.15rem;
+}
+
+.shop-price {
+  font-size: 1rem;
+  color: #d1b68b;
+  margin: 0;
+}
+
+.shop-actions {
+  text-align: right;
+}
+
+.shop-actions button {
+  background: #f4b115;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: #201e1a;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.shop-actions button:hover {
+  background: #f5b744;
+}
+
+#product {
+  width: 70%;
+  margin: 2rem auto;
+}
+
+#product h2 {
+  font-size: 1.5rem;
+  color: #a59b8b;
+  text-transform: uppercase;
+}
+
+#shop {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  background-color: beige;
+}
+
 
 /*
 #root {

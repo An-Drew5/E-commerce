@@ -1,12 +1,29 @@
 //import { imageGallery, newArrivals } from "../util/productImages";
 
-function Product({heading, images}) {
+import Shop from "./Shop";
+
+function Product({heading, product}) {
   // This component renders a product gallery using images from the imageGallery array
 
   return (
-    <>
+    <section id="Product">
+      <h2>{heading}</h2>
 
-    <section className="product-gallery-section">
+      <ul id="shop">
+        {
+          product.map((product) => (
+            <li key={product.id}>
+              <Shop {...product}/>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+
+   /* <>
+
+     <section className="product-gallery-section">
         <h2 className="product-gallery-heading">{heading}</h2>
         <div className="product-gallery-grid">
             {
@@ -24,7 +41,7 @@ function Product({heading, images}) {
             }
         </div>
     </section>
-   </> 
+   </>  */
   );
 }
 export default Product;
