@@ -59,7 +59,11 @@ function App() {
         updatedItems.splice(updatedItemIndex, 1);
       } else {
         updatedItems[updatedItemIndex] = updatedItem;
-      };
+      }
+
+      return {
+        items: updatedItems,
+      }
     });
   }
 
