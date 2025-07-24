@@ -67,11 +67,14 @@ function App() {
     });
   }
 
+  console.log()
   return (
     <>
-    <CartContext>
+    
+    <CartContext value={shoppingCart}>
 
-      <Header />
+      <Header cart={shoppingCart} onUpdateCartItemQuantity={handleUpdatedCartItemQuantity}/>
+
       <Product heading="Popular" product={imageGallery}/>
       <Product heading="New Arrivals" product={newArrivals}/>
       <Product heading="Window Blinds" product={blindsImages}/>
