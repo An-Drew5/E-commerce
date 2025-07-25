@@ -2,7 +2,7 @@
 
 import Shop from "./Shop";
 
-function Product({heading, product}) {
+function Product({heading, product, onAddToCart}) {
   // This component renders a product gallery using images from the imageGallery array
 
   return (
@@ -11,9 +11,9 @@ function Product({heading, product}) {
 
       <ul id="shop">
         {
-          product.map((product) => (
-            <li key={product.id}>
-              <Shop {...product}/>
+          product.map((productItem) => (
+            <li key={productItem.id}>
+              <Shop {...productItem} onAddToCart={() => onAddToCart(productItem.id, product)}/>
             </li>
           ))
         }

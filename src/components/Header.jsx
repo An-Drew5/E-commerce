@@ -3,10 +3,9 @@ import CartModal from "./CartModal";
 
 function Header({ cart, onUpdateCartItemQuantity }) {
   const modal = useRef();
-  console.log(cart);
   const cartQuantity = cart.items.length;
 
-  function handleOpenCart() {
+  function handleOpenCartClick() {
     modal.current.open();
   }
 
@@ -34,7 +33,7 @@ function Header({ cart, onUpdateCartItemQuantity }) {
         <div className="header-layer_1">
           <p>QUICK CURTAINS AND DECO</p>
           <p>
-            <button onClick={handleOpenCart}>Cart</button>
+            <button onClick={handleOpenCartClick}>Cart</button>
           </p>
         </div>
         <div className="header">
@@ -46,13 +45,8 @@ function Header({ cart, onUpdateCartItemQuantity }) {
                 </a>
               </li>
               <li>
-                <a href="#about" className="header-link">
-                  Shop
-                </a>
-              </li>
-              <li>
                 <a href="#contact" className="header-link">
-                  Discover
+                  Curtain Fabrics
                 </a>
               </li>
               <li>
@@ -66,18 +60,8 @@ function Header({ cart, onUpdateCartItemQuantity }) {
                 </a>
               </li>
               <li>
-                <a href="store-locator" className="header-link">
-                  Store Locator
-                </a>
-              </li>
-              <li>
                 <a href="furniture" className="header-link">
-                  Furniture
-                </a>
-              </li>
-              <li>
-                <a href="outdoor" className="header-link">
-                  Outdoor
+                  Deco
                 </a>
               </li>
             </ul>

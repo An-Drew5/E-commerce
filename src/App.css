@@ -17,7 +17,8 @@ body {
 #modal {
   width: 30%;
   background: #d3b17b;
-  border: none;
+  /* border: none; */
+  border-color: red;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   animation: fade-slide-in-from-top 0.3s ease-in-out;

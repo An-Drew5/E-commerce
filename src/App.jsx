@@ -75,10 +75,10 @@ function App() {
 
       <Header cart={shoppingCart} onUpdateCartItemQuantity={handleUpdatedCartItemQuantity}/>
 
-      <Product heading="Popular" product={imageGallery}/>
-      <Product heading="New Arrivals" product={newArrivals}/>
-      <Product heading="Window Blinds" product={blindsImages}/>
-      <Product heading="Wallpapers" product={wallpaperImages}/>
+      <Product heading="Popular" product={imageGallery} onAddToCart={handleAddItemToCart}/>
+      <Product heading="New Arrivals" product={newArrivals} onAddToCart={handleAddItemToCart}/>
+      <Product heading="Window Blinds" product={blindsImages} onAddToCart={handleAddItemToCart}/>
+      <Product heading="Wallpapers" product={wallpaperImages} onAddToCart={handleAddItemToCart}/>
 
     </CartContext>
     </>
