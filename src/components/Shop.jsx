@@ -1,4 +1,6 @@
-export default function Shop({ id, image, title, price, description, onAddToCart }){
+
+export default function Shop({ id, image, title, price, description, onAddToCart}){
+  
     return (
         <article className="shop">
             <img src={image} alt="" />

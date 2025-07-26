@@ -67,11 +67,14 @@ function App() {
     });
   }
 
-  console.log()
+  const ctxValue = {
+    items: shoppingCart.items,
+    addItemToCart: handleAddItemToCart
+  }
   return (
     <>
     
-    <CartContext value={shoppingCart}>
+    <CartContext value={ctxValue}>
 
       <Header cart={shoppingCart} onUpdateCartItemQuantity={handleUpdatedCartItemQuantity}/>
 
