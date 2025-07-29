@@ -1,5 +1,7 @@
 import { useRef } from "react";
+
 import CartModal from "./CartModal";
+import { FaSignInAlt } from "react-icons/fa";
 
 function Header({ cart, onUpdateCartItemQuantity }) {
   const modal = useRef();
@@ -34,6 +36,9 @@ function Header({ cart, onUpdateCartItemQuantity }) {
           <p>QUICK CURTAINS AND DECO</p>
           <p>
             <button onClick={handleOpenCartClick}>Cart</button>
+          </p>
+          <p>
+            <button>login</button>
           </p>
         </div>
         <div className="header">

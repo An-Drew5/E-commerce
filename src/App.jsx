@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Product from './components/Product'
+import Footer from './components/Footer'
 import { CartContext } from './store/shopping-cart-context'
 import { imageGallery, newArrivals, blindsImages, wallpaperImages } from "./util/productImages";
 
@@ -83,6 +84,7 @@ function App() {
       <Product heading="Window Blinds" product={blindsImages} onAddToCart={handleAddItemToCart}/>
       <Product heading="Wallpapers" product={wallpaperImages} onAddToCart={handleAddItemToCart}/>
 
+    <Footer />
     </CartContext>
     </>
   )
