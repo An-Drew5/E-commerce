@@ -6,7 +6,7 @@ export default function Cart ({onUpdateItemQuantity}){
     const totalPrice = items.reduce(
         (acc, item) => acc + item.price * item.quantity, 0
     )
-    const formattedTotalPrice = `$${totalPrice.toFixed(2)}`;
+    const formattedTotalPrice = `GHC${totalPrice.toFixed(2)}`;
 
     return (
     <div id="cart">
@@ -14,7 +14,7 @@ export default function Cart ({onUpdateItemQuantity}){
       {items.length > 0 && (
         <ul id="cart-items">
           {items.map((item) => {
-            const formattedPrice = `$${item.price.toFixed(2)}`;
+            const formattedPrice = `GHC${item.price.toFixed(2)}`;
 
             return (
               <li key={item.id}>

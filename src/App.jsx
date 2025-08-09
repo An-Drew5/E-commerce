@@ -5,6 +5,7 @@ import Product from './components/Product'
 import Footer from './components/Footer'
 import { CartContext } from './store/shopping-cart-context'
 import { imageGallery, newArrivals, blindsImages, wallpaperImages } from "./util/productImages";
+import Checkout from './components/Checkout'
 
 function App() {
   const [shoppingCart, setShoppingCart] = useState({
@@ -76,6 +77,7 @@ function App() {
     <>
     
     <CartContext value={ctxValue}>
+      <Checkout />
 
       <Header cart={shoppingCart} onUpdateCartItemQuantity={handleUpdatedCartItemQuantity}/>
 

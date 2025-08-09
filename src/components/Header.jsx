@@ -34,12 +34,14 @@ function Header({ cart, onUpdateCartItemQuantity }) {
       <header>
         <div className="header-layer_1">
           <p>QUICK CURTAINS AND DECO</p>
-          <p>
-            <button onClick={handleOpenCartClick}>Cart</button>
-          </p>
-          <p>
-            <button>login</button>
-          </p>
+          <div className="header-buttons">
+            <p>
+              <button onClick={handleOpenCartClick}>Cart</button>
+            </p>
+            <p>
+              <button>login</button>
+            </p>
+          </div>
         </div>
         <div className="header">
           <nav>
