@@ -1,42 +1,53 @@
-import Modal from "./Modal";
-
-export default function CartModal () {
-  return <Modal>
-    
-  </Modal>
-}
-
-
-
-// import { forwardRef, useImperativeHandle, useRef } from "react";
-// import { createPortal } from "react-dom";
+// import { use, useRef } from "react";
 // import Cart from "./Cart";
+// import Modal from "./Modal";
+// import UserProgressContext from "../store/UserProgressContext";
 
-// const CartModal = forwardRef(function Modal(
-//   { cartItems, onUpdateCartItemQuantity, title, actions },
-//   ref
-// ) {
-//   const dialog = useRef();
+// export default function CartModal (cartItems, onUpdateCartItemQuantity, title, actions) {
+//   const userProgressCtx = use(UserProgressContext);
 
-//   useImperativeHandle(ref, () => {
-//     return {
-//       open: () => {
-//         dialog.current.showModal();
-//       },
-//     };
-//   });
+  
 
-//   return createPortal(
-//     <dialog id="modal" ref={dialog}>
-//       <h2>{title}</h2>
-//       <Cart items={cartItems} onUpdateItemQuantity={onUpdateCartItemQuantity} />
-//       <form method="dialog" id="modal-actions">
-//         {actions}
-//       </form>
-//     </dialog>,
-//     document.getElementById("modal")
-//   );
-// });
+//   return <Modal>
+//     <h2>{title}</h2>
+//        <Cart items={cartItems} onUpdateItemQuantity={onUpdateCartItemQuantity} />
+//        <form method="dialog" id="modal-actions">
+//          {actions}
+//        </form>
+//   </Modal>
+// }
 
-// export default CartModal;
+
+
+import { forwardRef, useImperativeHandle, useRef } from "react";
+import { createPortal } from "react-dom";
+import Cart from "./Cart";
+
+const CartModal = forwardRef(function Modal(
+  { cartItems, onUpdateCartItemQuantity, title, actions },
+  ref
+) {
+  const dialog = useRef();
+
+  useImperativeHandle(ref, () => {
+    return {
+      open: () => {
+        dialog.current.showModal();
+      },
+    };
+  });
+
+  return createPortal(
+    <dialog id="modal" ref={dialog}>
+      <h2>{title}</h2>
+      <Cart items={cartItems} onUpdateItemQuantity={onUpdateCartItemQuantity} />
+      <form method="dialog" id="modal-actions">
+        {actions}
+      </form>
+    </dialog>,
+    document.getElementById("modal")
+  );
+});
+
+export default CartModal;
 

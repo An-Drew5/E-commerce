@@ -1,23 +1,40 @@
-import { useRef } from "react";
+import { use, useRef } from "react";
 
 import CartModal from "./CartModal";
+import UserProgressContext from "../store/UserProgressContext";
+import { CartContext } from "../store/shopping-cart-context";
 import { FaSignInAlt } from "react-icons/fa";
 
 function Header({ cart, onUpdateCartItemQuantity }) {
+  const userProgressCtx = use(UserProgressContext);
+  const cartCtx = use(CartContext)
   const modal = useRef();
   const cartQuantity = cart.items.length;
+
+  const totalItemsInCart = cartCtx.items.reduce((totalNumberOfItems, item) => {
+    return totalNumberOfItems + item.quantity
+  }, 0)
 
   function handleOpenCartClick() {
     modal.current.open();
   }
 
+  function handleCloseCart () {
+    userProgressCtx.hideCart()
+  }
+
+  function handleGoToCheckout(){
+    userProgressCtx.showCheckout()
+  }
+
   let modalActions = <button>Close</button>;
 
   if (cartQuantity && cartQuantity > 0) {
+    console.log(totalItemsInCart)
     modalActions = (
       <>
         <button>Close</button>
-        <button>Checkout</button>
+        <button onClick={handleGoToCheckout}>Checkout</button>
       </>
     );
   }
@@ -36,7 +53,7 @@ function Header({ cart, onUpdateCartItemQuantity }) {
           <p>QUICK CURTAINS AND DECO</p>
           <div className="header-buttons">
             <p>
-              <button onClick={handleOpenCartClick}>Cart</button>
+              <button onClick={handleOpenCartClick}>Cart ({totalItemsInCart})</button>
             </p>
             <p>
               <button>login</button>

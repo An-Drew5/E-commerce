@@ -1,11 +1,17 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './components/Header'
-import Product from './components/Product'
-import Footer from './components/Footer'
-import { CartContext } from './store/shopping-cart-context'
-import { imageGallery, newArrivals, blindsImages, wallpaperImages } from "./util/productImages";
-import Checkout from './components/Checkout'
+import { useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Product from "./components/Product";
+import Footer from "./components/Footer";
+import { CartContext } from "./store/shopping-cart-context";
+import { UserProgressContextProvider } from "./store/UserProgressContext";
+import {
+  imageGallery,
+  newArrivals,
+  blindsImages,
+  wallpaperImages,
+} from "./util/productImages";
+import Checkout from "./components/Checkout";
 
 function App() {
   const [shoppingCart, setShoppingCart] = useState({
@@ -39,7 +45,7 @@ function App() {
       }
 
       return {
-        items: updatedItems
+        items: updatedItems,
       };
     });
   }
@@ -53,11 +59,11 @@ function App() {
 
       const updatedItem = {
         ...updatedItems[updatedItemIndex],
-      }
+      };
 
       updatedItem.quantity += amount;
 
-      if(updatedItem.quantity <= 0) {
+      if (updatedItem.quantity <= 0) {
         updatedItems.splice(updatedItemIndex, 1);
       } else {
         updatedItems[updatedItemIndex] = updatedItem;
@@ -65,31 +71,54 @@ function App() {
 
       return {
         items: updatedItems,
-      }
+      };
     });
+  }
+
+  function clearCart (){
+    setShoppingCart({ items: [] });
   }
 
   const ctxValue = {
     items: shoppingCart.items,
-    addItemToCart: handleAddItemToCart
-  }
+    addItemToCart: handleAddItemToCart,
+    clearCart: clearCart,
+  };
   return (
     <>
-    
-    <CartContext value={ctxValue}>
-      <Checkout />
+        <CartContext value={ctxValue}>
+      <UserProgressContextProvider>
+        <Header
+          cart={shoppingCart}
+          onUpdateCartItemQuantity={handleUpdatedCartItemQuantity}
+        />
+        <Checkout />
+        <Product
+          heading="Popular"
+          product={imageGallery}
+          onAddToCart={handleAddItemToCart}
+        />
+        <Product
+          heading="New Arrivals"
+          product={newArrivals}
+          onAddToCart={handleAddItemToCart}
+        />
+        <Product
+          heading="Window Blinds"
+          product={blindsImages}
+          onAddToCart={handleAddItemToCart}
+        />
+        <Product
+          heading="Wallpapers"
+          product={wallpaperImages}
+          onAddToCart={handleAddItemToCart}
+        />
 
-      <Header cart={shoppingCart} onUpdateCartItemQuantity={handleUpdatedCartItemQuantity}/>
-
-      <Product heading="Popular" product={imageGallery} onAddToCart={handleAddItemToCart}/>
-      <Product heading="New Arrivals" product={newArrivals} onAddToCart={handleAddItemToCart}/>
-      <Product heading="Window Blinds" product={blindsImages} onAddToCart={handleAddItemToCart}/>
-      <Product heading="Wallpapers" product={wallpaperImages} onAddToCart={handleAddItemToCart}/>
-
-    <Footer />
-    </CartContext>
+        <Footer />
+      </UserProgressContextProvider>
+      </CartContext>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
