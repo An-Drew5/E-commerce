@@ -1,55 +1,54 @@
-import { use, useRef } from "react";
+// import { use, useRef } from "react";
 
-import CartModal from "./CartModal";
-import UserProgressContext from "../store/UserProgressContext";
-import { CartContext } from "../store/shopping-cart-context";
-import { FaSignInAlt } from "react-icons/fa";
+// import CartModal from "./CartModal";
+// import UserProgressContext from "../store/UserProgressContext";
+// import { CartContext } from "../store/shopping-cart-context";
 
 function Header({ cart, onUpdateCartItemQuantity }) {
-  const userProgressCtx = use(UserProgressContext);
-  const cartCtx = use(CartContext)
-  const modal = useRef();
-  const cartQuantity = cart.items.length;
+//   const userProgressCtx = use(UserProgressContext);
+//   const cartCtx = use(CartContext)
+//   const modal = useRef();
+//   const cartQuantity = cart.items.length;
 
-  const totalItemsInCart = cartCtx.items.reduce((totalNumberOfItems, item) => {
-    return totalNumberOfItems + item.quantity
-  }, 0)
+//   const totalItemsInCart = cartCtx.items.reduce((totalNumberOfItems, item) => {
+//     return totalNumberOfItems + item.quantity
+//   }, 0)
 
-  function handleOpenCartClick() {
-    modal.current.open();
-  }
+//   function handleOpenCartClick() {
+//     modal.current.open();
+//   }
 
-  function handleCloseCart () {
-    userProgressCtx.hideCart()
-  }
+//   function handleCloseCart () {
+//     userProgressCtx.hideCart()
+//   }
 
-  function handleGoToCheckout(){
-    userProgressCtx.showCheckout()
-  }
+//   function handleGoToCheckout(){
+//     userProgressCtx.showCheckout()
+//   }
 
-  let modalActions = <button>Close</button>;
+//   let modalActions = <button>Close</button>;
 
-  if (cartQuantity && cartQuantity > 0) {
-    console.log(totalItemsInCart)
-    modalActions = (
-      <>
-        <button>Close</button>
-        <button onClick={handleGoToCheckout}>Checkout</button>
-      </>
-    );
-  }
+//   if (cartQuantity && cartQuantity > 0) {
+//     console.log(totalItemsInCart)
+//     modalActions = (
+//       <>
+//         <button>Close</button>
+//         <button onClick={handleGoToCheckout}>Checkout</button>
+//       </>
+//     );
+//   }
 
   return (
     <>
-      <CartModal
+      {/* <CartModal
         ref={modal}
         cartItems={cart.items}
         onUpdateCartItemQuantity={onUpdateCartItemQuantity}
         title="Your Cart"
         actions={modalActions}
-      />
+      /> */}
       <header>
-        <div className="header-layer_1">
+        {/* <div className="header-layer_1">
           <p>QUICK CURTAINS AND DECO</p>
           <div className="header-buttons">
             <p>
@@ -59,9 +58,9 @@ function Header({ cart, onUpdateCartItemQuantity }) {
               <button>login</button>
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="header">
-          <nav>
+          {/* <nav>
             <ul className="header-nav">
               <li>
                 <a href="#home" className="header-link">
@@ -89,8 +88,9 @@ function Header({ cart, onUpdateCartItemQuantity }) {
                 </a>
               </li>
             </ul>
-          </nav>
-          <div className="header-subtitle">
+          </nav> */}
+          <div className="header-img">
+            <div className="header-subtitle">
             <p>bring home a chic look with beautiful ready made curtains</p>
           </div>
           <div>
@@ -105,6 +105,7 @@ function Header({ cart, onUpdateCartItemQuantity }) {
               you find the perfect match for your space. Each curtain is crafted
               with high-quality materials, providing durability and a chic look.
             </p>
+          </div>
           </div>
         </div>
       </header>

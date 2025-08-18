@@ -1,4 +1,4 @@
-*{
+* {
   /* margin: 0;
   padding: 0; */
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Merriweather', sans-serif;
+  font-family: "Merriweather", sans-serif;
   background-color: beige;
   color: #1f0505;
   -webkit-font-smoothing: antialiased;
@@ -101,7 +101,7 @@ body {
   color: #312c1d;
 }
 
-.checkout-form{
+.checkout-form {
   flex-direction: column;
 }
 
@@ -110,7 +110,6 @@ body {
   display: flex;
   flex-direction: column;
   /* border: 1px solid #c62e2e; */
-  
 }
 
 .label {
@@ -138,7 +137,6 @@ body {
 .column {
   flex-direction: column;
 }
-
 
 #cart-items {
   list-style: none;
@@ -215,7 +213,6 @@ body {
 .error-messages li {
   margin-right: 1rem;
   list-style: none;
-
 }
 
 .header {
@@ -224,12 +221,21 @@ body {
   justify-content: flex-start;
   align-items: center;
 
-  width: 100%;
+  /* width: 100%;
   height: 80%;
-  min-height: 800px;
+  min-height: 800px; */
+
+  /* background-size: cover;
+  background-position: center; */
+}
+
+.header-img {
   background-image: url("/bg-img-2.jpg");
   background-size: cover;
   background-position: center;
+  width: 100%;
+  height: 80%;
+  min-height: 800px;
 }
 
 .header-layer_1 {
@@ -237,15 +243,12 @@ body {
   flex-direction: row;
   align-items: center;
   margin-left: 15rem;
-  
-  
 }
 
-.header-layer_1 p{
+.header-layer_1 p {
   font-size: 1.5rem;
   font-weight: bold;
   text-shadow: 0 0 4px rgba(35, 34, 34, 0.4);
-
 }
 
 .header-buttons p {
@@ -272,9 +275,72 @@ body {
   margin: 2rem 2rem;
   color: #fff;
   border: 1px solid #000;
-
 }
 
+/* Navigation Styles */
+.header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  background: beige;
+  backdrop-filter: blur(2px);
+  transition: background 0.3s;
+}
+
+.header-link {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.1rem;
+  color: #2d2d2d;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  background: transparent;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  overflow: hidden;
+}
+
+.header-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #bfa14a;
+  transition: width 0.3s cubic-bezier(.4,0,.2,1), left 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.header-link:hover,
+.header-link:focus {
+  color: #bfa14a;
+  background: rgba(191,161,74,0.08);
+}
+
+.header-link:hover::after,
+.header-link:focus::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Optional: subtle nav fade-in animation */
+@keyframes navFadeIn {
+  from { opacity: 0; transform: translateY(-16px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.header-nav {
+  animation: navFadeIn 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+/* 
 .header-nav {
   display: flex;
   justify-content: center;
@@ -289,7 +355,8 @@ body {
 }
 
 .header-link {
-  color: #fff;
+  list-style: none;
+  color: #322828;
   text-decoration: none;
   font-size: 1.1rem;
   transition: text-decoration 0.2s;
@@ -297,7 +364,7 @@ body {
 
 .header-link:hover {
   text-decoration: underline;
-}
+} */
 
 .img_class {
   width: 100%;
@@ -306,7 +373,6 @@ body {
 
 /* Main section styling */
 .product-gallery-section {
-
   height: 100%;
   background: beige;
   border-radius: 6px;
@@ -441,13 +507,13 @@ body {
 }
 
 footer {
-  background-color: #111;             /* Dark base for contrast */
-  color: #f1f1f1;                     /* Light text color */
-  padding: 40px 20px;                 /* Spacious feel */
+  background-color: #111; /* Dark base for contrast */
+  color: #f1f1f1; /* Light text color */
+  padding: 40px 20px; /* Spacious feel */
   text-align: center;
   font-size: 0.95rem;
   line-height: 1.6;
-  border-top: 3px solid #444;        /* Subtle top border */
+  border-top: 3px solid #444; /* Subtle top border */
 }
 
 footer a {
@@ -476,8 +542,6 @@ footer a:hover {
     padding: 30px 15px;
   }
 }
-
-
 
 /*
 #root {

@@ -1,17 +1,41 @@
 import { useState } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import "./App.css";
 import Header from "./components/Header";
 import Product from "./components/Product";
 import Footer from "./components/Footer";
+import Checkout from "./components/Checkout";
+
 import { CartContext } from "./store/shopping-cart-context";
 import { UserProgressContextProvider } from "./store/UserProgressContext";
+
 import {
   imageGallery,
   newArrivals,
   blindsImages,
   wallpaperImages,
 } from "./util/productImages";
-import Checkout from "./components/Checkout";
+
+import RootLayout from "./pages/RootNav";
+import HomePage from "./pages/Home";
+import CurtainFabricsPage from "./pages/CurtainFabrics";
+import ReadyMadeCurtainsPage from "./pages/ReadyMadeCurtains";
+import StyleExpertPage from "./pages/StyleExpert";
+import HeaderBar from "./components/HeaderBar";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "curtain-fabrics", element: <CurtainFabricsPage /> },
+      { path: "style-expert", element: <StyleExpertPage /> },
+      { path: "ready-made-curtains", element: <ReadyMadeCurtainsPage /> },
+    ],
+  },
+]);
 
 function App() {
   const [shoppingCart, setShoppingCart] = useState({
@@ -75,7 +99,7 @@ function App() {
     });
   }
 
-  function clearCart (){
+  function clearCart() {
     setShoppingCart({ items: [] });
   }
 
@@ -86,36 +110,42 @@ function App() {
   };
   return (
     <>
-        <CartContext value={ctxValue}>
-      <UserProgressContextProvider>
-        <Header
-          cart={shoppingCart}
-          onUpdateCartItemQuantity={handleUpdatedCartItemQuantity}
-        />
-        <Checkout />
-        <Product
-          heading="Popular"
-          product={imageGallery}
-          onAddToCart={handleAddItemToCart}
-        />
-        <Product
-          heading="New Arrivals"
-          product={newArrivals}
-          onAddToCart={handleAddItemToCart}
-        />
-        <Product
-          heading="Window Blinds"
-          product={blindsImages}
-          onAddToCart={handleAddItemToCart}
-        />
-        <Product
-          heading="Wallpapers"
-          product={wallpaperImages}
-          onAddToCart={handleAddItemToCart}
-        />
+      <CartContext value={ctxValue}>
+        <UserProgressContextProvider>
+          <HeaderBar cart={shoppingCart}
+            onUpdateCartItemQuantity={handleUpdatedCartItemQuantity}/>
 
-        <Footer />
-      </UserProgressContextProvider>
+          <RouterProvider router={router}/>
+
+          <Header
+            cart={shoppingCart}
+            onUpdateCartItemQuantity={handleUpdatedCartItemQuantity}
+          />
+          
+          <Checkout />
+          <Product
+            heading="Popular"
+            product={imageGallery}
+            onAddToCart={handleAddItemToCart}
+          />
+          <Product
+            heading="New Arrivals"
+            product={newArrivals}
+            onAddToCart={handleAddItemToCart}
+          />
+          <Product
+            heading="Window Blinds"
+            product={blindsImages}
+            onAddToCart={handleAddItemToCart}
+          />
+          <Product
+            heading="Wallpapers"
+            product={wallpaperImages}
+            onAddToCart={handleAddItemToCart}
+          />
+
+          <Footer />
+        </UserProgressContextProvider>
       </CartContext>
     </>
   );
