@@ -22,8 +22,13 @@ export default function MainNavigation () {
                 </Link>
               </li>
               <li>
-                <Link to="/furniture" className="header-link">
-                  Deco
+                <Link to="/window-blinds" className="header-link">
+                  Window Blinds
+                </Link>
+              </li>
+              <li>
+                <Link to="/wallpapers" className="header-link">
+                  Wallpapers
                 </Link>
               </li>
             </ul>

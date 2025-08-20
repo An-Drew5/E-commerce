@@ -2,14 +2,14 @@ import { use, useRef } from "react";
 
 import CartModal from "./CartModal";
 import UserProgressContext from "../store/UserProgressContext";
-import { CartContext } from "../store/shopping-cart-context";
+import CartContext from "../store/shopping-cart-context";
 
 
 export default function HeaderBar({ cart, onUpdateCartItemQuantity }) {
       const userProgressCtx = use(UserProgressContext);
   const cartCtx = use(CartContext)
   const modal = useRef();
-  const cartQuantity = cart.items.length;
+  const cartQuantity = cartCtx.items.length;
 
   const totalItemsInCart = cartCtx.items.reduce((totalNumberOfItems, item) => {
     return totalNumberOfItems + item.quantity
@@ -41,7 +41,7 @@ export default function HeaderBar({ cart, onUpdateCartItemQuantity }) {
     return <>
     <CartModal
         ref={modal}
-        cartItems={cart.items}
+        cartItems={cartCtx.items}
         onUpdateCartItemQuantity={onUpdateCartItemQuantity}
         title="Your Cart"
         actions={modalActions}

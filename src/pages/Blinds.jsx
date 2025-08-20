@@ -2,17 +2,16 @@ import { use } from "react";
 
 import CartContext from "../store/shopping-cart-context";
 
-import Product from "./Product";
-import { wallpaperImages } from "../util/productImages";
+import { blindsImages } from "../util/productImages";
+import Product from "../components/Product";
 
-export default function WallpapersPage() {
+export default function BlindsPage() {
   const cartCtx = use(CartContext);
-
   return (
     <>
       <Product
-        heading="Available Wallpapers"
-        product={wallpaperImages}
+        heading="Available Curtain Blinds"
+        product={blindsImages}
         onAddToCart={cartCtx.addItemToCart}
       />
     </>

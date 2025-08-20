@@ -4,7 +4,7 @@
 // import UserProgressContext from "../store/UserProgressContext";
 // import { CartContext } from "../store/shopping-cart-context";
 
-function Header({ cart, onUpdateCartItemQuantity }) {
+function Header() {
 //   const userProgressCtx = use(UserProgressContext);
 //   const cartCtx = use(CartContext)
 //   const modal = useRef();
