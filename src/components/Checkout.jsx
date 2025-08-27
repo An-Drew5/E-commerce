@@ -79,14 +79,14 @@ export default function Checkout() {
         <h2>Success!</h2>
         <p>Your order was submitted successfully.</p>
         <p>We will notify you with more details through text message in minutes.</p>
-        <button type="button" onClick={handleCloseSuccess}>Okay</button>
+        <button type="button" className="success-button" onClick={handleCloseSuccess}>Okay</button>
       </Modal>
     );
   }
 
   // Otherwise, render the checkout form modal
   return (
-    <Modal open={userProgressCtx.progress === "checkout"}>
+    <Modal open={userProgressCtx.progress === "checkout"} id="checkout" >
       <form onSubmit={checkoutAction} className="checkout-form">
         <div>
           <h2>Checkout</h2>
