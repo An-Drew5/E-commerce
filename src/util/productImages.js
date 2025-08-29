@@ -351,4 +351,4 @@ export const wallpaperImages = [
         price: 300.00,
         description: "test"
     },
-]
+];

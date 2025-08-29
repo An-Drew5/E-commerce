@@ -4,6 +4,7 @@ function Header() {
       <header>
         <div className="header">
           <div className="header-img">
+            <img src="" alt="" />
             <div className="header-subtitle">
               <p>bring home a chic look with beautiful ready made curtains</p>
             </div>

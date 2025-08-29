@@ -1,24 +1,3 @@
-// import { use, useRef } from "react";
-// import Cart from "./Cart";
-// import Modal from "./Modal";
-// import UserProgressContext from "../store/UserProgressContext";
-
-// export default function CartModal (cartItems, onUpdateCartItemQuantity, title, actions) {
-//   const userProgressCtx = use(UserProgressContext);
-
-  
-
-//   return <Modal>
-//     <h2>{title}</h2>
-//        <Cart items={cartItems} onUpdateItemQuantity={onUpdateCartItemQuantity} />
-//        <form method="dialog" id="modal-actions">
-//          {actions}
-//        </form>
-//   </Modal>
-// }
-
-
-
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import { createPortal } from "react-dom";
 import Cart from "./Cart";
