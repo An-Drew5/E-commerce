@@ -38,6 +38,10 @@ export default function HeaderBar({ cart, onUpdateCartItemQuantity }) {
     userProgressCtx.showCheckout();
   }
 
+  function handleAdminLogin(){
+    userProgressCtx.showAdminLogin();
+  }
+
   let modalActions = <button>Close</button>;
 
   if (cartQuantity && cartQuantity > 0) {
@@ -81,7 +85,7 @@ export default function HeaderBar({ cart, onUpdateCartItemQuantity }) {
             </button>
           </p>
           <p>
-            <button>login</button>
+            <button onClick={handleAdminLogin}>login</button>
           </p>
         </div>
       </div>

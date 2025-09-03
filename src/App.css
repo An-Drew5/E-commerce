@@ -129,6 +129,10 @@ body {
   border: 1px solid #ccc;
 }
 
+.admin-button{
+  margin-top: 0.5rem;
+}
+
 .control-row {
   display: flex;
   margin-top: 0.5rem;

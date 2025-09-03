@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { blindsImages } from "../util/productImages";
 
 import CartContext from "../store/shopping-cart-context";

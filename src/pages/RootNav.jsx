@@ -6,6 +6,7 @@ import CartContext from "../store/shopping-cart-context";
 
 import HeaderBar from "../components/HeaderBar";
 import Checkout from "../components/Checkout";
+import AdminLogin from "../components/AdminLogin";
 import MainNavigation from "../components/MainNavigation";
 
 export default function RootLayout() {
@@ -16,6 +17,7 @@ export default function RootLayout() {
       
           <HeaderBar cart={CartContext.items} onUpdateCartItemQuantity={cartCtx.updateCartItems} />
           <Checkout />
+          <AdminLogin />
 
       <MainNavigation />
       <Outlet />

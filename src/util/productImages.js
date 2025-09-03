@@ -352,3 +352,83 @@ export const wallpaperImages = [
         description: "test"
     },
 ];
+
+export const curtainFabricsImages = [
+    {
+        id: 50,
+        image: "/images/img-50.jpg",
+        title: "bold elegance",
+        price: 200.00,
+        description: "Make a statement with our bold elegance curtain fabric, featuring vibrant patterns and rich colors to elevate any room."
+    },
+    {
+        id: 51,
+        image: "/images/img-51.jpg",
+        title: "soft serenity",
+        price: 200.00,
+        description: "Create a calming atmosphere with our soft serenity curtain fabric, designed with gentle hues and delicate textures for a peaceful retreat."
+    },
+    {
+        id: 52,
+        image: "/images/img-52.jpg",
+        title: "modern chic",
+        price: 200.00,
+        description: "Add a touch of sophistication with our modern chic curtain fabric, featuring sleek designs and contemporary patterns perfect for stylish interiors."
+    },
+    {
+        id: 53,
+        image: "/images/img-53.jpg",
+        title: "classic charm",
+        price: 200.00,
+        description: "Embrace timeless beauty with our classic charm curtain fabric, showcasing elegant patterns and traditional colors that never go out of style."
+    },
+    {
+        id: 54,
+        image: "/images/img-54.jpg",
+        title: "nature's touch",
+        price: 200.00,
+        description: "Bring the outdoors in with our nature's touch curtain fabric, featuring earthy tones and organic patterns inspired by the beauty of nature."
+    },
+    {
+        id: 55,
+        image: "/images/img-55.jpg",
+        title: "vibrant vibes",
+        price: 200.00,
+        description: "Infuse energy into your space with our vibrant vibes curtain fabric, designed with bold colors and dynamic patterns to create a lively ambiance."
+    },
+    {
+        id: 56,
+        image: "/images/img-56.jpg",
+        title: "elegant textures",
+        price: 200.00,
+        description: "Experience luxury with our elegant textures curtain fabric, featuring rich materials and intricate designs that add depth and sophistication to any room."
+    },
+    {
+        id: 57,
+        image: "/images/img-57.jpg",
+        title: "playful patterns",
+        price: 200.00,
+        description: "Add a fun twist to your decor with our playful patterns curtain fabric, showcasing whimsical designs and cheerful colors that brighten up any space."
+    },
+    {
+        id: 58,
+        image: "/images/img-58.jpg",
+        title: "subtle sophistication",
+        price: 200.00,
+        description: "Achieve understated elegance with our subtle sophistication curtain fabric, featuring muted tones and refined patterns for a chic and polished look."
+    },
+    {
+        id: 59,
+        image: "/images/img-59.jpg",
+        title: "luxury linen",
+        price: 200.00,
+        description: "Indulge in the softness of our luxury linen curtain fabric, crafted from high-quality materials that offer both comfort and style for your living spaces."
+    },
+    {
+        id: 60,
+        image: "/images/img-60.jpg",
+        title: "geometric glamour",
+        price: 200.00,
+        description: "Make a bold statement with our geometric glamour curtain fabric, featuring striking shapes and patterns that add a modern edge to any room."
+    }
+]
