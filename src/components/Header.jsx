@@ -1,14 +1,12 @@
+import image from '../assets/image-8.jpg'
+
 function Header() {
   return (
     <>
       <header>
         <div className="header">
-          <div className="header-img">
-            <img src="" alt="" />
-            <div className="header-subtitle">
+          <div className="header-subtitle">
               <p>bring home a chic look with beautiful ready made curtains</p>
-            </div>
-            <div>
               <h2 className="product-description-heading">
                 Product Description
               </h2>
@@ -24,6 +22,9 @@ function Header() {
                 a chic look.
               </p>
             </div>
+
+          <div className="header-img">
+            <img src={image} alt="" />
           </div>
         </div>
       </header>

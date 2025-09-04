@@ -230,28 +230,116 @@ body {
 /*--------------------*/
 
 /*Header.jsx*/
+
 .header {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.header-img {
-  background-image: url("/bg-img-2.jpg");
-  background-size: cover;
-  background-position: center;
+   flex-wrap: wrap; 
   width: 100%;
-  height: 80%;
-  min-height: 800px;
+  height: auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  border: 1px solid red;
 }
 
-.header-subtitle {
-  font-size: 2rem;
-  margin: 2rem 2rem;
-  color: #fff;
-  border: 1px solid #000;
+/* .general-header{
+  display: flex;
+  flex-wrap: wrap; 
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+} */
+
+.header-subtitle,
+.header-img,
+.fabrics-img {
+  flex: 1 1 50%;
+  padding: 1rem;
+  box-sizing: border-box;
 }
+
+/* Optional: Make the image scale nicely */
+.header-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'contain' if you want full image visibility */
+  display:block;
+  border-radius: 8px; /* optional styling */
+}
+
+.fabrics-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'contain' if you want full image visibility */
+  display:block;
+  border-radius: 8px; /* optional styling */
+  border: 1px solid red;
+}
+
+/* ...existing code... */
+
+/* Reduce GeneralPageHeader height by ~50% and keep image responsive */
+.general-header {
+  height: 50vh;          /* reduces header height to roughly half of a full viewport */
+  max-height: 50vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.general-header .header-description {
+  flex: 1 1 45%;
+  min-width: 14rem;
+}
+
+.general-header .general-header-img {
+  flex: 1 1 55%;
+  max-height: 100%;
+  border: 1px solid red;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.general-header .general-header-img img{
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.5s ease;
+}
+
+/* subtle hover zoom for a bit of polish */
+.general-header .general-header-img img:hover {
+  transform: scale(1.03);
+}
+
+
+/* .header {
+  display: flex;
+  flex-direction: row;
+} */
+
+/* .header-img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  
+  overflow: hidden;
+}
+.header-img img {
+  width: 100%;
+  height: 100%;
+  /* margin: 0.5rem 1rem; 
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}*/
 /*marked*/
 
 /*HeaderBar.jsx*/
@@ -439,6 +527,7 @@ body {
   font-size: 3rem;
   color: #f39909;
   text-transform: uppercase;
+  text-align: center;
 }
 
 #shop {
