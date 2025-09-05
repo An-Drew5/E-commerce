@@ -1,5 +1,5 @@
 import GeneralPageHeader from "../components/GeneralPageHeader";
-import image from "../assets/image-7.jpg"
+import image from "../assets/image-9.jpg"
 export default function StyleExpertPage() {
   return (
     <>

@@ -254,13 +254,14 @@ body {
 .fabrics-img {
   flex: 1 1 50%;
   padding: 1rem;
-  box-sizing: border-box;
+  box-sizing:border-box;
+  
 }
 
 /* Optional: Make the image scale nicely */
 .header-img img {
   width: 100%;
-  height: 100%;
+  height: 60%;
   object-fit: cover; /* or 'contain' if you want full image visibility */
   display:block;
   border-radius: 8px; /* optional styling */
