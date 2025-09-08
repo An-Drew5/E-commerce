@@ -64,7 +64,7 @@ export default function HeaderBar({ cart, onUpdateCartItemQuantity }) {
       />
       <div className="header-bar">
         <p>QUICK CURTAINS AND DECO</p>
-        <div className="header-bar-search">
+        {/* <div className="header-bar-search">
           {showSearch && <input type="text" placeholder="Search..." />}
           <button onClick={toggleSearchHandler} className="search-icon-button">
             <svg
@@ -77,6 +77,10 @@ export default function HeaderBar({ cart, onUpdateCartItemQuantity }) {
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.656a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z" />
             </svg>
           </button>
+        </div> */}
+
+        <div className="header-bar-search">
+          <input type="text" placeholder="search..." />
         </div>
         <div className="header-bar-buttons">
           <p>

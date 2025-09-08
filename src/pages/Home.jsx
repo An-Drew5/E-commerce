@@ -3,10 +3,8 @@ import { use, useState } from "react";
 import Product from "../components/Product";
 import Footer from "../components/Footer";
 import Checkout from "../components/Checkout";
-import HeaderBar from "../components/HeaderBar";
 import Header from "../components/Header";
 import CartContext from "../store/shopping-cart-context";
-import { UserProgressContextProvider } from "../store/UserProgressContext";
 
 import {
   imageGallery,
@@ -33,16 +31,6 @@ export default function HomePage() {
       <Product
         heading="New Arrivals"
         product={newArrivals}
-        onAddToCart={cartCtx.addItemToCart}
-      />
-      <Product
-        heading="Window Blinds"
-        product={blindsImages}
-        onAddToCart={cartCtx.addItemToCart}
-      />
-      <Product
-        heading="Wallpapers"
-        product={wallpaperImages}
         onAddToCart={cartCtx.addItemToCart}
       />
 
