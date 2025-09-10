@@ -1,6 +1,11 @@
+import { use } from "react";
 import GeneralPageHeader from "../components/GeneralPageHeader";
 import image from "../assets/image-9.jpg"
+import CartContext from "../store/shopping-cart-context";
+import Product from "../components/Product";
+import { curtainFabricsImages } from "../util/productImages";
 export default function StyleExpertPage() {
+  const cartCtx = use(CartContext)
   return (
     <>
       <h1>This is style Page</h1>
@@ -18,9 +23,11 @@ export default function StyleExpertPage() {
       </GeneralPageHeader>
 
       <div>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, nihil. Fuga atque omnis enim suscipit consequatur neque laudantium? Excepturi aspernatur assumenda quaerat ut nihil repudiandae voluptas natus repellat odit incidunt?
-        </p>
+        <Product
+                heading="Available Curtain Fabrics"
+                product={curtainFabricsImages}
+                onAddToCart={cartCtx.addItemToCart}
+              />
       </div>
     </>
   );
