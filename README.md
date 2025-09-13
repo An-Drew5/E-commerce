@@ -18,6 +18,5 @@ A modern, single-page React application for browsing and purchasing home décor 
 - **Routing**: React Router
 - **State Management**: useReducer (for cart logic)
 
-## 📦 Project Structure
 
 

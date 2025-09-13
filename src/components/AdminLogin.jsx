@@ -1,4 +1,5 @@
 import { use } from "react";
+import { Form } from "react-router-dom";
 import UserProgressContext from "../store/UserProgressContext";
 import Modal from "./Modal";
 
@@ -10,7 +11,8 @@ export default function AdminLogin() {
 
   return (
     <Modal open={userProgressCtx.progress === "adminLogin"}>
-      <div className="control">
+      <Form meethod='post'>
+        <div className="control">
         <h3>Welcome</h3>
         <h2>Please Enter Login Credentials</h2>
 
@@ -45,6 +47,7 @@ export default function AdminLogin() {
           </section>
         </form>
       </div>
+      </Form>
     </Modal>
   );
 }
