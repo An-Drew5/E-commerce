@@ -8,10 +8,10 @@ export default function AdminLogin() {
   function handleClose() {
     userProgressCtx.hideAdminLogin();
   }
-
+ 
   return (
     <Modal open={userProgressCtx.progress === "adminLogin"}>
-      <Form meethod='post'>
+      <Form method='post'>
         <div className="control">
         <h3>Welcome</h3>
         <h2>Please Enter Login Credentials</h2>
@@ -50,4 +50,14 @@ export default function AdminLogin() {
       </Form>
     </Modal>
   );
+}
+
+export async function action (request) {
+  const searchParams = new URL(request.url).searchParams;
+  searchParams.get()
+  const data = await request.formData();
+  const authData = {
+    email: data.get('email'),
+    password: data.get('password'),
+  }
 }
