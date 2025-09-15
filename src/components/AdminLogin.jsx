@@ -60,4 +60,17 @@ export async function action (request) {
     email: data.get('email'),
     password: data.get('password'),
   }
+
+  const response = await fetch('link', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(authData)
+  })
+
+  const resData = response.json();
+  const token = resData.token;
+
+  localStorage.setItem('token', token);
 }
