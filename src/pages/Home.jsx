@@ -23,6 +23,8 @@ export default function HomePage() {
 
       <Checkout />
 
+      <h1>This is a test</h1>
+
       <Product
         heading="Popular"
         product={imageGallery}
