@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -17,14 +16,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    
     - run: npm ci
     - run: npm run build
+    
     - name: Deploy 🚀
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: dist # Changed from 'build' to 'dist' (Vite output folder)
+        folder: dist
+        branch: gh-pages
+        token: ${{ secrets.GITHUB_TOKEN }}
