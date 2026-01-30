@@ -34,7 +34,9 @@ const router = createBrowserRouter([
       { path: "details/:id", element: <ProductDetailPage />}
     ],
   },
-]);
+], {
+  basename: "/E-commerce/", // Match the base path for GitHub Pages deployment
+});
 
 function App() {
   

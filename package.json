@@ -1,13 +1,13 @@
 {
   "name": "app-2-cur-and-deco",
-  "homepage": "https://An-Drew5.github.io/app-2-cur-and-deco",
+  "homepage": "https://An-Drew5.github.io/E-commerce",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "npx gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
